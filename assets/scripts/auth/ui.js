@@ -1,0 +1,72 @@
+const store = require('../store')
+
+const signUpSuccess = function (data) {
+  console.log(data)
+  store.user = data.user
+  console.log('Successfully signed up!')
+  $('#message').text('You have succesfully signed up!')
+  $('#sign-up').hide()
+  $('#sign-in').show()
+}
+
+const signUpFailure = function () {
+  $('#message').text('Error on sign up. Username might have been taken or there is a typo!')
+}
+
+const signInSuccess = function (data) {
+  console.log(data)
+  console.log('Successfully signed in!')
+  $('#message').text('Aparecium! You have succesfully signed in!')
+  $('#change-password').show()
+  $('#sign-out').show()
+  $('#sign-up').hide()
+  $('#sign-in').hide()
+  store.user = data.user
+}
+
+const signInFailure = function () {
+  console.error(error)
+  $('#message').text('Error with your login, buddy!')
+    .then($('#change-password').hide())
+    .then($('#sign-out').hide())
+}
+
+const changePasswordSuccess = function () {
+  console.log('Successfully changed password!')
+  $('#message').text('Aparecium! You have succesfully changed password!')
+}
+
+const changePasswordFailure = function () {
+  // console.error(error)
+  $('#message').text('Error wtih changing your password, buddy!')
+    .then($('#change-password').hide())
+    .then($('#sign-out').hide())
+}
+
+const signOutSuccess = function (data) {
+  console.log(data)
+  console.log('Successfully changed password!')
+  $('#message').text('You have succesfully signed out!')
+  store.user = null
+  store.game = null
+  // console.log(store.user)
+  $('#sign-up').show()
+  $('#sign-in').show()
+}
+
+const signOutFailure = function () {
+  $('#message').text('Error wtih signing out, buddy!')
+    .then($('#change-password').hide())
+    .then($('#sign-out').hide())
+}
+
+module.exports = {
+  signUpSuccess,
+  signUpFailure,
+  signInSuccess,
+  signInFailure,
+  changePasswordSuccess,
+  changePasswordFailure,
+  signOutSuccess,
+  signOutFailure
+}

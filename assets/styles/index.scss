@@ -1,2 +1,23 @@
-$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
-@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+// $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+// @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  font-family: 'IM Fell Great Primer', serif;
+  background-color: rgb(187, 70, 121);
+  text-align: center;
+  width: 550px;
+  margin: auto;
+}
+
+h1 {
+  color: pink;
+  font-size: 100px;
+  text-align: center;
+  font-family: 'IM Fell Great Primer', serif;
+}
+
+h2 {
+color: grey;
+text-align: center;
+font-family: 'IM Fell Great Primer', serif;
+}
