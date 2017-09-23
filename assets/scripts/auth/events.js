@@ -8,17 +8,15 @@ const onSignUp = function (event) {
   event.preventDefault()
   api.signUp(data)
     .then(ui.signUpSuccess)
-    console.log('You have Signed up!')
     .catch(ui.signUpFailure)
 }
 
 const onSignIn = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
-
   api.signIn(data)
     .then(ui.signInSuccess)
-    console.log('You have Signed In!')
+    // console.log('You have Signed In!')
     .catch(ui.signInFailure)
 }
 const onChangePassword = function (event) {
@@ -36,6 +34,7 @@ const onSignOut = function (event) {
   api.signOut()
     .then(ui.signOutSuccess)
     .then($('#sign-out').hide())
+    .then($('#change-password').hide())
     .catch(ui.signOutFailure)
 }
 

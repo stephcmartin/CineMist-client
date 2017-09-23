@@ -10,47 +10,89 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-      <link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
     </head>
     <body class="container-fluid">
       <h1>CineMist</h1>
-      <h2>Never Forget A Movie Again!</h2>
-      <div class="message" id='message'></div>
+      <div class="message" id='message'><h2>Never Forget A Movie Again</h2></div>
+      <!-- Button trigger modal -->
+<button type="button" id="about" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+About
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">About</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget scelerisque ex. Vestibulum facilisis, orci quis laoreet sollicitudin, odio nulla interdum neque, in mattis nulla sapien eget tellus. Donec at mi dictum nisi porta aliquet vel et urna. Donec ac lacinia metus, vel viverra tellus. Fusce mauris tortor, sodales ultrices porta non, sollicitudin sed sem. Nam sit amet rutrum lacus. Sed non elit nunc. Fusce tortor risus, viverra nec ipsum vel, aliquet rutrum dui. Aliquam volutpat imperdiet magna sed tempus. Sed convallis velit id diam faucibus blandit. Cras sed interdum risus, vel vestibulum tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean volutpat a lectus in iaculis.
+
+In porta nunc et orci rhoncus tincidunt. Integer lorem dolor, rhoncus at turpis nec, mattis tempus lectus. Donec fermentum iaculis tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse imperdiet libero id felis scelerisque malesuada. Vestibulum id blandit eros. Maecenas feugiat diam tellus, at vestibulum libero semper eget. Nam quis molestie neque, at imperdiet felis. Ut felis tellus, pulvinar id suscipit sit amet, ornare vitae est. Cras eu mattis elit. Aliquam erat volutpat.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
       <!-- Sign Up -->
+      <div class="form-group">
       <form id="sign-up">
               <fieldset>
-                <legend><br>Sign Up Here: </legend>
+                <legend id="instruction"><br>Create An Account </legend>
                 <input type="text" name="credentials[email]" placeholder="YOUR EMAIL">
                 <input type="password" name="credentials[password]" placeholder="YOUR PASSWORD">
                 <input type="password" name="credentials[password_confirmation]" placeholder="PASSWORD CONFIRMATION">
-                <input type="submit" name="submit" value="Sign up!">
+                <input type="submit" name="submit" value="Sign up!" id="yes-button">
               </fieldset>
       </form>
       <br>
             <form id="sign-in">
               <fieldset>
-                <legend>Sign In To Your Account:</legend>
+                <legend id="instruction">Login</legend>
                 <input type="text" name="credentials[email]" placeholder="YOUR EMAIL">
                 <input type="password" name="credentials[password]" placeholder="YOUR PASSWORD">
-                <input type="submit" name="submit" value="Sign in to your account!">
+                <input type="submit" name="submit" value="Sign in to your account!" id="yes-button">
               </fieldset>
             </form>
             <form id="change-password">
               <fieldset>
-                <legend>Change your password:</legend>
+                <legend id="instruction">Change your password:</legend>
                 <input type="password" name="passwords[old]" placeholder="YOUR OLD PASSWORD">
                 <input type="password" name="passwords[new]" placeholder="YOUR NEW PASSWORD">
-                <input type="submit" name="submit" value="Change your password!">
+                <input type="submit" name="submit" value="Change your password!" id="yes-button">
               </fieldset>
             </form>
             <br>
             <form id="sign-out">
-              <fieldset>
+              <fieldset id="instruction">
                 <legend></legend>
-                <input type="submit" name="submit" value="Sign Out!">
+                <input type="submit" name="submit" value="Sign Out!" id="yes-button">
               </fieldset>
             </form>
+      </div>
       <br>
-      <footer>Made By Root Wizard Stephanie Martin Connelly 🍩 </footer>
+    <div id="footerwrap">
+		<div class="container">
+				<div class="col-lg-4">
+					<p>Web Developer & Poodle Enthuisast</p>
+				</div>
+
+				<div class="col-lg-4">
+					<p>Boston, Massachusetts</p>
+          <p>©  Stephanie Chow Martin Connelly 2017</p>
+				</div>
+				<div class="col-lg-4">
+					<a href="hellotheresteph@gmail.com"><p>hellotheresteph@gmail.com</a>
+				</div>
+			</div>
+		</div>
+	</div>
     </body>
 </html>

@@ -1,23 +1,88 @@
-// $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
-// @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 body {
-  font-family: 'IM Fell Great Primer', serif;
-  background-color: rgb(187, 70, 121);
+  font-family: 'Khula', sans-serif;
+  background-color: grey;
   text-align: center;
-  width: 550px;
+  // width: 550px;
   margin: auto;
+  background-image: url(https://i.imgur.com/ul8Cu2l.jpg);
+  background-repeat: repeat;
 }
 
 h1 {
-  color: pink;
+  color: darkgrey;
   font-size: 100px;
   text-align: center;
-  font-family: 'IM Fell Great Primer', serif;
+  font-family: 'Khula', sans-serif;
+  font-style: 'extra-bold';
+  font-weight: 900;
+  padding-top: 100px;
+  padding-bottom: 200px;
 }
 
-h2 {
-color: grey;
+h2, h3, h4{
+color: white;
 text-align: center;
-font-family: 'IM Fell Great Primer', serif;
+font-family: 'Khula', sans-serif;
+font-weight: 600;
+}
+
+#about{
+  margin-top: 50px;
+     margin-right: 50px;
+     position:absolute;
+     top:0;
+     right:0;
+     font-family: 'Khula', sans-serif;
+}
+
+#message{
+  font-family: 'Khula', sans-serif;
+  color: rgba(64, 75, 96, 0.87);
+}
+
+#change-password{
+  display:none
+}
+
+#sign-out{
+display:none
+}
+
+#footerwrap {
+	padding-top: 70px;
+	padding-bottom: 50px;
+  width: 100%;
+}
+
+#footerwrap p {
+	color: #f2f2f2;
+	margin-left: 10px;
+}
+
+#form-group{
+  width: 550px;
+}
+
+.btn-primary{
+    background-color: rgba(105, 107, 112, 0.53) !important;
+    border-color: black !important;
+    font-family: 'Khula', sans-serif !important;
+    font-weight: 700 !important;
+}
+#fieldset {
+  background-color: rgba(105, 107, 112, 0.53) !important;
+  border-color: black !important;
+}
+#instruction{
+  font-family: 'Khula', sans-serif;
+  color: white;
+}
+
+#yes-button{
+  background-color: rgba(105, 107, 112, 0.7) !important;
+  border-color: black !important;
+  font-family: 'Khula', sans-serif !important;
 }

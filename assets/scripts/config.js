@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://cinemist.herokuapp.com'
+    production: 'https://cinemist.herokuapp.com',
   }
 }
 

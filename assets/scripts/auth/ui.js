@@ -25,7 +25,6 @@ const signInSuccess = function (data) {
 }
 
 const signInFailure = function () {
-  console.error(error)
   $('#message').text('Error with your login, buddy!')
     .then($('#change-password').hide())
     .then($('#sign-out').hide())
@@ -48,7 +47,6 @@ const signOutSuccess = function (data) {
   console.log('Successfully changed password!')
   $('#message').text('You have succesfully signed out!')
   store.user = null
-  store.game = null
   // console.log(store.user)
   $('#sign-up').show()
   $('#sign-in').show()
