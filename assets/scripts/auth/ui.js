@@ -7,6 +7,7 @@ const signUpSuccess = function (data) {
   $('#message').text('You have succesfully signed up!')
   $('#sign-up').hide()
   $('#sign-in').show()
+  // $('#list-body').show()
 }
 
 const signUpFailure = function () {
@@ -21,6 +22,8 @@ const signInSuccess = function (data) {
   $('#sign-out').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
+  $('#list-options').show()
+  $('#list-body').show()
   store.user = data.user
 }
 
@@ -28,6 +31,7 @@ const signInFailure = function () {
   $('#message').text('Error with your login, buddy!')
     .then($('#change-password').hide())
     .then($('#sign-out').hide())
+    .then($('#list-body').hide())
 }
 
 const changePasswordSuccess = function () {
@@ -40,6 +44,7 @@ const changePasswordFailure = function () {
   $('#message').text('Error wtih changing your password, buddy!')
     .then($('#change-password').hide())
     .then($('#sign-out').hide())
+    .then($('#list-body').hide())
 }
 
 const signOutSuccess = function (data) {
@@ -50,6 +55,8 @@ const signOutSuccess = function (data) {
   // console.log(store.user)
   $('#sign-up').show()
   $('#sign-in').show()
+  $('#list-options').hide()
+  $('#list-body').hide()
 }
 
 const signOutFailure = function () {

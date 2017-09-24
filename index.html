@@ -10,7 +10,9 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-      <link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
     </head>
     <body class="container-fluid">
       <h1>CineMist</h1>
@@ -32,8 +34,6 @@ About
       </div>
       <div class="modal-body">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget scelerisque ex. Vestibulum facilisis, orci quis laoreet sollicitudin, odio nulla interdum neque, in mattis nulla sapien eget tellus. Donec at mi dictum nisi porta aliquet vel et urna. Donec ac lacinia metus, vel viverra tellus. Fusce mauris tortor, sodales ultrices porta non, sollicitudin sed sem. Nam sit amet rutrum lacus. Sed non elit nunc. Fusce tortor risus, viverra nec ipsum vel, aliquet rutrum dui. Aliquam volutpat imperdiet magna sed tempus. Sed convallis velit id diam faucibus blandit. Cras sed interdum risus, vel vestibulum tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean volutpat a lectus in iaculis.
-
-In porta nunc et orci rhoncus tincidunt. Integer lorem dolor, rhoncus at turpis nec, mattis tempus lectus. Donec fermentum iaculis tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse imperdiet libero id felis scelerisque malesuada. Vestibulum id blandit eros. Maecenas feugiat diam tellus, at vestibulum libero semper eget. Nam quis molestie neque, at imperdiet felis. Ut felis tellus, pulvinar id suscipit sit amet, ornare vitae est. Cras eu mattis elit. Aliquam erat volutpat.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -41,11 +41,11 @@ In porta nunc et orci rhoncus tincidunt. Integer lorem dolor, rhoncus at turpis 
     </div>
   </div>
 </div>
-      <!-- Sign Up -->
+      <!-- AUTH FUNCTIONS-->
       <div class="form-group">
       <form id="sign-up">
               <fieldset>
-                <legend id="instruction"><br>Create An Account </legend>
+                <h3>Create An Account:</h3>
                 <input type="text" name="credentials[email]" placeholder="YOUR EMAIL">
                 <input type="password" name="credentials[password]" placeholder="YOUR PASSWORD">
                 <input type="password" name="credentials[password_confirmation]" placeholder="PASSWORD CONFIRMATION">
@@ -55,7 +55,7 @@ In porta nunc et orci rhoncus tincidunt. Integer lorem dolor, rhoncus at turpis 
       <br>
             <form id="sign-in">
               <fieldset>
-                <legend id="instruction">Login</legend>
+                <h3>Login</h3>
                 <input type="text" name="credentials[email]" placeholder="YOUR EMAIL">
                 <input type="password" name="credentials[password]" placeholder="YOUR PASSWORD">
                 <input type="submit" name="submit" value="Sign in to your account!" id="yes-button">
@@ -63,21 +63,36 @@ In porta nunc et orci rhoncus tincidunt. Integer lorem dolor, rhoncus at turpis 
             </form>
             <form id="change-password">
               <fieldset>
-                <legend id="instruction">Change your password:</legend>
+                <h3>Change your password:</h3>
                 <input type="password" name="passwords[old]" placeholder="YOUR OLD PASSWORD">
-                <input type="password" name="passwords[new]" placeholder="YOUR NEW PASSWORD">
+                <input type="password" name="passwords[new]" placeholder="YOUR NEW PASSWORD"><br>
                 <input type="submit" name="submit" value="Change your password!" id="yes-button">
               </fieldset>
             </form>
             <br>
             <form id="sign-out">
-              <fieldset id="instruction">
-                <legend></legend>
                 <input type="submit" name="submit" value="Sign Out!" id="yes-button">
               </fieldset>
             </form>
       </div>
       <br>
+      <!-- List Options -->
+    <div id="list-options">
+    <button type="button" class="btn btn-outline-dark" id="btn btn-outline-dark">View Your To-Watch List</button>
+  </div>
+<div id="list-body">
+<h5>Add A New Movie To Your List:</h5><br>
+<form id="list-add">
+  <input type="title" name="title" placeholder="movie title"><br>
+  <input type="director" name="director" placeholder="director"><br>
+  <input type="summary" name="summary" placeholder="summary"><br>
+  <input type="genre" name="genre" placeholder="enre"><br>
+  <input type="runtime" name="runtime" placeholder="runtime"><br>
+  <input type="year_release" name="year_release" placeholder="year released"><br>
+  <input type="submit" name="submit" value="Add To List" id="yes-button">
+    </div>
+
+    <!--  footerwrap -->
     <div id="footerwrap">
 		<div class="container">
 				<div class="col-lg-4">
@@ -85,8 +100,7 @@ In porta nunc et orci rhoncus tincidunt. Integer lorem dolor, rhoncus at turpis 
 				</div>
 
 				<div class="col-lg-4">
-					<p>Boston, Massachusetts</p>
-          <p>©  Stephanie Chow Martin Connelly 2017</p>
+          <p>Created By:<br>©  Stephanie Chow Martin Connelly 2017</p>
 				</div>
 				<div class="col-lg-4">
 					<a href="hellotheresteph@gmail.com"><p>hellotheresteph@gmail.com</a>

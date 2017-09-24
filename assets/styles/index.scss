@@ -5,41 +5,64 @@ body {
   font-family: 'Khula', sans-serif;
   background-color: grey;
   text-align: center;
-  // width: 550px;
   margin: auto;
   background-image: url(https://i.imgur.com/ul8Cu2l.jpg);
-  background-repeat: repeat;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
   color: darkgrey;
   font-size: 100px;
   text-align: center;
-  font-family: 'Khula', sans-serif;
-  font-style: 'extra-bold';
+  font-family: 'Nosifer', cursive;
   font-weight: 900;
   padding-top: 100px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 
-h2, h3, h4{
+h2, h4{
 color: white;
 text-align: center;
-font-family: 'Khula', sans-serif;
+font-family: 'Bevan', cursive;
 font-weight: 600;
 }
 
+h3{
+font-family: 'Bevan', cursive;
+color: white;
+text-align: center;
+}
+
 #about{
-  margin-top: 50px;
+    margin-top: 50px;
      margin-right: 50px;
      position:absolute;
      top:0;
      right:0;
-     font-family: 'Khula', sans-serif;
+     font-family: 'Bevan', cursive;
+}
+#sign-out{
+  margin-top: 50px;
+   margin-right: 150px;
+   position:absolute;
+   top:0;
+   right:0;
+   font-family: 'Bevan', cursive;
+}
+
+#change-password{
+  margin-top: 50px;
+  margin-right: 150px;
+  position:absolute;
+  top:0;
+  left:10;
 }
 
 #message{
-  font-family: 'Khula', sans-serif;
+  font-family: 'Bevan', cursive;
   color: rgba(64, 75, 96, 0.87);
 }
 
@@ -51,23 +74,33 @@ font-weight: 600;
 display:none
 }
 
+#list-body{
+display:none
+}
+
 #footerwrap {
 	padding-top: 70px;
 	padding-bottom: 50px;
   width: 100%;
+  // background-color: black;
+  position: absolute;
+  bottom:0;
 }
 
 #footerwrap p {
-	color: #f2f2f2;
+	color: white;
 	margin-left: 10px;
+  font-size: 15px;
+font-family: 'Bevan', cursive;
+color: darkgrey;
 }
 
 #form-group{
   width: 550px;
 }
 
-.btn-primary{
-    background-color: rgba(105, 107, 112, 0.53) !important;
+.btn-primary, #list-button{
+    background-color: rgb(105, 107, 112) !important;
     border-color: black !important;
     font-family: 'Khula', sans-serif !important;
     font-weight: 700 !important;
@@ -85,4 +118,15 @@ display:none
   background-color: rgba(105, 107, 112, 0.7) !important;
   border-color: black !important;
   font-family: 'Khula', sans-serif !important;
+}
+
+h5{
+  font-family: 'Bevan', cursive;
+  color: rgba(64, 75, 96, 0.87);
+  font-size: 18px;
+  padding: 80;
+}
+
+#list-options{
+  display: none;
 }
