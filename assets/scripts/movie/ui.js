@@ -1,3 +1,5 @@
+const showMoviesTemplate = require('../templates/movie-listing.handlebars')
+
 const MakeMovieSuccess = function (data) {
   console.log('You have Successfully added movie to your list')
   $('#message').text('You have successfully added movie to your list')
@@ -10,7 +12,9 @@ const MakeMovieFailure = function () {
 const getMoviesSuccess = function (data) {
   console.log(data)
   console.log('List of movies attained')
-  $('#list-body').show()
+  $('#message').text('Here is your to-watch list')
+  const showMoviesHtml = showMoviesTemplate({ movies: data.movies })
+  $('#list').append(showMoviesHtml)
 }
 
 const getMoviesFailure = function () {

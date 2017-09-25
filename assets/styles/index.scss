@@ -19,7 +19,7 @@ h1 {
   text-align: center;
   font-family: 'Nosifer', cursive;
   font-weight: 900;
-  padding-top: 80px;
+  padding-top: 100px;
   padding-bottom: 80px;
 }
 
@@ -130,8 +130,17 @@ h5{
 #list-body{
   display: none;
 }
-
 .textboxclass {
 height: 40px;
 width: 550px;
+}
+
+.textbox {
+height: 40px;
+width: 200px;
+}
+
+li{
+list-style-type: none;
+font-size: 18px;
 }

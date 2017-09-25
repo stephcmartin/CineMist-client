@@ -46,33 +46,33 @@ About
       <form id="sign-up">
               <fieldset>
                 <h3>Create An Account:</h3>
-                <input type="text" name="credentials[email]" placeholder="YOUR EMAIL">
-                <input type="password" name="credentials[password]" placeholder="YOUR PASSWORD">
-                <input type="password" name="credentials[password_confirmation]" placeholder="PASSWORD CONFIRMATION">
-                <input type="submit" name="submit" value="Sign up!" id="yes-button">
+                <input type="text" name="credentials[email]" class="textbox" placeholder="USERNAME">
+                <input type="password" name="credentials[password]" class="textbox" placeholder="PASSWORD">
+                <input type="password" name="credentials[password_confirmation]" class="textbox" placeholder="PASSWORD CONFIRMATION">
+                <input type="submit" name="submit" value="Sign up!" class="btn btn-primary" id="yes-button">
               </fieldset>
       </form>
       <br>
             <form id="sign-in">
               <fieldset>
                 <h3>Login</h3>
-                <input type="text" name="credentials[email]" placeholder="YOUR EMAIL">
-                <input type="password" name="credentials[password]" placeholder="YOUR PASSWORD">
-                <input type="submit" name="submit" value="Sign in to your account!" id="yes-button">
+                <input type="text" name="credentials[email]" class="textbox" placeholder="USERNAME">
+                <input type="password" name="credentials[password]" class="textbox" placeholder="PASSWORD">
+                <input type="submit" name="submit" value="Sign in to your account!" class="btn btn-primary" id="yes-button">
               </fieldset>
             </form>
             <form id="change-password">
               <fieldset>
-                <h3>Change your password:</h3>
-                <input type="password" name="passwords[old]" placeholder="YOUR OLD PASSWORD">
-                <input type="password" name="passwords[new]" placeholder="YOUR NEW PASSWORD"><br>
-                <input type="submit" name="submit" value="Change your password!" id="yes-button">
+                <h5>Change your password:</h5>
+                <input type="password" name="passwords[old]" class="textbox" placeholder="OLD PASSWORD">
+                <input type="password" name="passwords[new]" class="textbox" placeholder="NEW PASSWORD"><br>
+                <input type="submit" name="submit" value="Change your password!" class="btn btn-primary" id="yes-button">
               </fieldset>
             </form>
             <br>
             <form id="sign-out">
               <fieldset>
-                <input type="submit" name="submit" value="Sign Out!" id="yes-button">
+                <input type="submit" name="submit" value="Sign Out" class="btn btn-primary" id="yes-button">
               </fieldset>
             </form>
       </div>
@@ -80,8 +80,10 @@ About
       <!-- List Options -->
   <div id="list-body">
   <form id="get-movies">
-  <input type="submit" name="submit" value="Your To-Watch List">
+  <input type="submit" name="submit" value="Your To-Watch List" class="btn btn-primary">
+  <div class="list" id='list'></div>
  </form>
+ <div id="movie-list">
 <h5>Add A New Movie To Your List:</h5><br>
 <form id="make-movie">
   <input type="title" class="textboxclass" name="movie[title]" placeholder="movie title"><br>
@@ -90,9 +92,10 @@ About
   <input type="genre" class="textboxclass" name="movie[genre]" placeholder="genre"><br>
   <input type="runtime" class="textboxclass" name="movie[runtime]" placeholder="runtime"><br>
   <input type="year_release" class="textboxclass" name="movie[year_release]" placeholder="year released"><br>
-  <input type="submit" class="textboxclass" name="submit" value="Add To List">
+  <input type="submit" name="submit" value="Add To List" class="btn btn-primary">
 </form>
     </div>
+  </div>
 
     <!--  footerwrap -->
     <div id="footerwrap">
