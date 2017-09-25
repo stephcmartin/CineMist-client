@@ -19,8 +19,8 @@ h1 {
   text-align: center;
   font-family: 'Nosifer', cursive;
   font-weight: 900;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 h2, h4{
@@ -96,7 +96,7 @@ color: darkgrey;
 }
 
 #form-group{
-  width: 550px;
+  width: 600px;
 }
 
 .btn-primary, #list-button{
@@ -129,4 +129,9 @@ h5{
 
 #list-body{
   display: none;
+}
+
+.textboxclass {
+height: 40px;
+width: 550px;
 }

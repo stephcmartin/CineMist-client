@@ -6,7 +6,7 @@ const onMakeMovie = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
   console.log('Make Movie button working')
-  console.log(data)
+  console.log('our data is ', data)
   api.makeMovie(data)
     .then(ui.MakeMovieSuccess)
     .catch(ui.MakeMovieFailure)
