@@ -7,8 +7,8 @@ const signUpSuccess = function (data) {
   $('#message').text('You have succesfully signed up!')
   $('#sign-up').hide()
   $('#sign-in').show()
-  $('#list-body').show()
-  $('#get-movies').show()
+  $('#list-body').hide()
+  $('#get-movies').hide()
 }
 
 const signUpFailure = function () {
@@ -25,6 +25,7 @@ const signInSuccess = function (data) {
   $('#sign-in').hide()
   $('#list-body').show()
   $('#get-movies').show()
+  // $('.form-group').hide()
   store.user = data.user
 }
 

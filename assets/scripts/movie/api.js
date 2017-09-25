@@ -22,7 +22,19 @@ const getMovies = function () {
   })
 }
 
+const deleteMovie = function (movieId) {
+  console.log(movieId)
+  return $.ajax({
+    url: config.apiOrigin + '/movies/' + movieId,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   makeMovie,
-  getMovies
+  getMovies,
+  deleteMovie
 }
