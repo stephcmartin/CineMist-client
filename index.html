@@ -71,25 +71,27 @@ About
             </form>
             <br>
             <form id="sign-out">
+              <fieldset>
                 <input type="submit" name="submit" value="Sign Out!" id="yes-button">
               </fieldset>
             </form>
       </div>
       <br>
       <!-- List Options -->
-    <div id="list-options">
-    <button type="button" class="btn btn-outline-dark" id="btn btn-outline-dark">View Your To-Watch List</button>
-  </div>
-<div id="list-body">
+  <div id="list-body">
+  <form id="get-movies">
+  <input type="submit" name="submit" value="Your To-Watch List">
+ </form>
 <h5>Add A New Movie To Your List:</h5><br>
-<form id="list-add">
+<form id="make-movie">
   <input type="title" name="title" placeholder="movie title"><br>
   <input type="director" name="director" placeholder="director"><br>
   <input type="summary" name="summary" placeholder="summary"><br>
   <input type="genre" name="genre" placeholder="enre"><br>
   <input type="runtime" name="runtime" placeholder="runtime"><br>
   <input type="year_release" name="year_release" placeholder="year released"><br>
-  <input type="submit" name="submit" value="Add To List" id="yes-button">
+  <input type="submit" name="submit" value="Add To List">
+</form>
     </div>
 
     <!--  footerwrap -->
