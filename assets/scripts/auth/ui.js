@@ -16,7 +16,7 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (data) {
-  $('#message').text('You have succesfully signed in!')
+  $('#message').text('You have succesfully signed in!').fadeOut(1000)
   $('#change-password').show()
   $('#sign-out').show()
   $('#sign-up').hide()

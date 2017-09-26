@@ -86,8 +86,7 @@ display:none
 	padding-top: 70px;
 	padding-bottom: 50px;
   width: 100%;
-  // background-color: black;
-  position: absolute;
+  // position: absolute;
   bottom:0;
 }
 
@@ -104,7 +103,7 @@ color: darkgrey;
 }
 
 .btn-primary, #list-button, .edit-movie, .delete-movie{
-    background-color: rgb(105, 107, 112) !important;
+    background-color: red !important;
     border-color: black !important;
     font-family: 'Khula', sans-serif !important;
     font-weight: 700 !important;
@@ -118,7 +117,7 @@ color: darkgrey;
   color: white;
 }
 
-#btn-xs, #btn-sm, .edit-movie-button{
+#btn-xs, #btn-sm, .edit-movie-button, .delete-movie{
   background-color: rgba(105, 107, 112, 0.7) !important;
   border-color: black !important;
   font-family: 'Khula', sans-serif !important;
@@ -181,4 +180,8 @@ fieldset{
 
 .edit-movie{
   display:none;
+}
+
+#list{
+  overflow: auto
 }

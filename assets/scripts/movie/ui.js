@@ -6,7 +6,6 @@ const makeMovieSuccess = function (data) {
   // console.log('You have Successfully added movie to your list')
   $('#message').text('You have successfully added movie to your list')
   $('#make-movie').trigger('reset')
-  // console.log(data)
   api.getMovies()
     .then(getMoviesSuccess)
     .catch(makeMovieFailure)
@@ -19,11 +18,13 @@ const makeMovieFailure = function () {
 const getMoviesSuccess = function (data) {
   console.log('List of movies attained')
   const showMoviesHtml = showMoviesTemplate({ movies: data.movies })
+  $('#list').empty()
   $('#list').append(showMoviesHtml)
   $('.delete-movie').on('click', onDeleteMovie)
   $('.edit-movie').on('submit', onEditMovie)
   $('.edit-movie-button').on('click', onEditClick)
   $('#to-watch').attr('disabled', 'disabled')
+  $('.edit-movie').trigger('reset')
 }
 
 const getMoviesFailure = function () {
