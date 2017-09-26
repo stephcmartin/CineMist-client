@@ -16,16 +16,12 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (data) {
-  console.log(data)
-  console.log('Successfully signed in!')
-  $('#message').text('Aparecium! You have succesfully signed in!')
+  $('#message').text('You have succesfully signed in!')
   $('#change-password').show()
   $('#sign-out').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
   $('#list-body').show()
-  // $('#get-movies').show()
-  // $('.form-group').hide()
   store.user = data.user
 }
 
@@ -38,27 +34,23 @@ const signInFailure = function () {
 
 const changePasswordSuccess = function () {
   console.log('Successfully changed password!')
-  $('#message').text('Aparecium! You have succesfully changed password!')
+  $('#message').text('You have succesfully changed password!')
 }
 
 const changePasswordFailure = function () {
-  // console.error(error)
   $('#message').text('Error wtih changing your password, buddy!')
-    .then($('#change-password').hide())
-    .then($('#sign-out').hide())
-    .then($('#list-body').hide())
+  $('#change-password').trigger('reset')
 }
 
 const signOutSuccess = function (data) {
   console.log(data)
-  console.log('Successfully changed password!')
   $('#message').text('You have succesfully signed out!')
   store.user = null
-  // console.log(store.user)
   $('#sign-up').show()
   $('#sign-in').show()
-  $('#list-options').hide()
   $('#list-body').hide()
+  $('#sign-in').trigger('reset')
+  $('#sign-up').trigger('reset')
 }
 
 const signOutFailure = function () {

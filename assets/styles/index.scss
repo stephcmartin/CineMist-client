@@ -3,7 +3,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 body {
   font-family: 'Khula', sans-serif;
-  background-color: grey;
+  background-color: black;
   text-align: center;
   margin: auto;
   background-image: url(https://i.imgur.com/ul8Cu2l.jpg);
@@ -19,7 +19,7 @@ h1 {
   text-align: center;
   font-family: 'Nosifer', cursive;
   font-weight: 900;
-  padding-top: 100px;
+  padding-top: 80px;
   padding-bottom: 80px;
 }
 
@@ -118,7 +118,7 @@ color: darkgrey;
   color: white;
 }
 
-#yes-button{
+#btn-xs, #btn-sm, .edit-movie-button{
   background-color: rgba(105, 107, 112, 0.7) !important;
   border-color: black !important;
   font-family: 'Khula', sans-serif !important;
@@ -138,11 +138,28 @@ h5{
 .textboxclass {
 height: 40px;
 width: 400px;
+text-align: center;
+font-family: 'Bevan', cursive;
+font-family: 'Neuton', serif;
+font-size: 9px;
 }
 
 .textbox {
 height: 40px;
 width: 200px;
+text-align: center;
+color: rgba(64, 75, 96, 0.7);
+font-family: 'Bevan', cursive;
+font-size: 9px;
+}
+
+.password_textbox{
+  height: 20px;
+  width: 150px;
+  text-align: center;
+  font-family: 'Bevan', cursive;
+  color: rgba(64, 75, 96, 0.7);
+  font-size: 9px;
 }
 
 li{
@@ -150,4 +167,18 @@ list-style-type: none;
 font-size: 18px;
 color: white;
 background-color: black;
+text-align: center;
+}
+
+fieldset{
+  background-color: black;
+}
+
+.modal-body{
+  font-size: 25px;
+  font-family: 'Bevan', cursive;
+}
+
+.edit-movie{
+  display:none;
 }
