@@ -3,7 +3,7 @@ const getFormFields = require(`../../../lib/get-form-fields`)
 const showMoviesTemplate = require('../templates/movie-listing.handlebars')
 
 const makeMovieSuccess = function (data) {
-  // console.log('You have Successfully added movie to your list')
+  console.log('You have Successfully added movie to your list')
   $('#message').text('You have successfully added movie to your list')
   $('#make-movie').trigger('reset')
   api.getMovies()
@@ -24,7 +24,7 @@ const getMoviesSuccess = function (data) {
   $('.edit-movie').on('submit', onEditMovie)
   $('.edit-movie-button').on('click', onEditClick)
   $('#to-watch').attr('disabled', 'disabled')
-  $('.edit-movie').trigger('reset')
+  $('#make-movie').trigger('reset')
 }
 
 const getMoviesFailure = function () {

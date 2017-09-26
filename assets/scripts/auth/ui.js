@@ -22,6 +22,7 @@ const signInSuccess = function (data) {
   $('#sign-up').hide()
   $('#sign-in').hide()
   $('#list-body').show()
+  $('#get-movies').show()
   store.user = data.user
 }
 
@@ -51,6 +52,7 @@ const signOutSuccess = function (data) {
   $('#list-body').hide()
   $('#sign-in').trigger('reset')
   $('#sign-up').trigger('reset')
+  $('#list').empty()
 }
 
 const signOutFailure = function () {

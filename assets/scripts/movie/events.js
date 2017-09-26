@@ -7,8 +7,8 @@ const onMakeMovie = function (event) {
   event.preventDefault()
   console.log('our make movie data is ', data)
   api.makeMovie(data)
-    .then(ui.MakeMovieSuccess)
-    .catch(ui.MakeMovieFailure)
+    .then(ui.makeMovieSuccess)
+    .catch(ui.makeMovieFailure)
 }
 
 const onGetMovies = function (event) {
