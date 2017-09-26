@@ -5,7 +5,7 @@ const ui = require('./ui')
 const onMakeMovie = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
-  console.log('our make movie data is ', data)
+  // console.log('our make movie data is ', data)
   api.makeMovie(data)
     .then(ui.makeMovieSuccess)
     .catch(ui.makeMovieFailure)

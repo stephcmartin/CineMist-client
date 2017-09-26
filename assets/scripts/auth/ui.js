@@ -1,9 +1,9 @@
 const store = require('../store')
 
 const signUpSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   store.user = data.user
-  console.log('Successfully signed up!')
+  // console.log('Successfully signed up!')
   $('#message').text('You have succesfully signed up!')
   $('#sign-up').hide()
   $('#sign-in').show()
@@ -16,7 +16,7 @@ const signUpFailure = function () {
 }
 
 const signInSuccess = function (data) {
-  $('#message').text('You have succesfully signed in!').fadeOut(1000)
+  $('#message').text('You have succesfully signed in!')
   $('#change-password').show()
   $('#sign-out').show()
   $('#sign-up').hide()
@@ -34,8 +34,9 @@ const signInFailure = function () {
 }
 
 const changePasswordSuccess = function () {
-  console.log('Successfully changed password!')
+  // console.log('Successfully changed password!')
   $('#message').text('You have succesfully changed password!')
+  $('#change-password').trigger('reset')
 }
 
 const changePasswordFailure = function () {
@@ -44,7 +45,7 @@ const changePasswordFailure = function () {
 }
 
 const signOutSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   $('#message').text('You have succesfully signed out!')
   store.user = null
   $('#sign-up').show()

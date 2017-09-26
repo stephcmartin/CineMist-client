@@ -3,7 +3,7 @@ const getFormFields = require(`../../../lib/get-form-fields`)
 const showMoviesTemplate = require('../templates/movie-listing.handlebars')
 
 const makeMovieSuccess = function (data) {
-  console.log('You have Successfully added movie to your list')
+  // console.log('You have Successfully added movie to your list')
   $('#message').text('You have successfully added movie to your list')
   $('#make-movie').trigger('reset')
   api.getMovies()
@@ -11,12 +11,12 @@ const makeMovieSuccess = function (data) {
     .catch(makeMovieFailure)
 }
 const makeMovieFailure = function () {
-  console.log('Add Movie failure')
+  // console.log('Add Movie failure')
   $('#message').text('You have failed to add a movie to your list')
 }
 
 const getMoviesSuccess = function (data) {
-  console.log('List of movies attained')
+  // $('#message').text('List of movies attained')
   const showMoviesHtml = showMoviesTemplate({ movies: data.movies })
   $('#list').empty()
   $('#list').append(showMoviesHtml)
@@ -28,14 +28,14 @@ const getMoviesSuccess = function (data) {
 }
 
 const getMoviesFailure = function () {
-  console.error('error getting movies')
+  $('#message').text('There was an error retriving your list')
 }
 
 const onDeleteMovie = function () {
-  console.log('You have Successfully deleted your movie')
+  // console.log('You have Successfully deleted your movie')
   $('#message').text('You have successfully deleted the movie on your to-watch list')
   const movieId = $(this).parent().parent().data('id')
-  console.log('this will delete movie # ' + movieId)
+  // console.log('this will delete movie # ' + movieId)
   $(this).parent().parent().remove()
   api.deleteMovie(movieId)
     .then(deleteMovieSuccess)
@@ -43,27 +43,27 @@ const onDeleteMovie = function () {
 }
 
 const deleteMovieSuccess = function (data) {
-  console.log('You have succesfully deleted movie')
+  $('#message').text('You have successfully deleted the movie on your to-watch list')
   api.getMovies()
     .then(getMoviesSuccess)
     .catch(makeMovieFailure)
 }
 const deleteMovieFailure = function () {
-  console.log('delete wine failure')
+  $('#message').text('Failed to delete movie.')
 }
 
 const onEditMovie = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
   const movieId = $(this).parent().data('id')
-  console.log('Edit movie data is ' + data)
+  // console.log('Edit movie data is ' + data)
   api.editMovie(data, movieId)
     .then(editMovieSuccess)
     .catch(editMovieFailure)
 }
 
 const editMovieSuccess = function (data) {
-  console.log('You have Successfully edited movie. Data is: ' + data)
+  $('#message').text('You have successfully edited your movie')
   $('.edit-movie').trigger('reset')
   api.getMovies()
     .then(getMoviesSuccess)
@@ -77,7 +77,7 @@ const editMovieFailure = function () {
 const onEditClick = function (event) {
   const movieId = $(this).parent().parent().data('id')
   event.preventDefault()
-  console.log('you clicked edit' + movieId)
+  // console.log('you clicked edit' + movieId)
   $('#edit-movie-' + movieId).toggle()
 }
 const hideMovie = function () {
