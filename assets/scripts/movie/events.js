@@ -14,17 +14,11 @@ const onMakeMovie = function (event) {
 
 const onGetMovies = function (event) {
   event.preventDefault()
+  // $('#list').delay('200').toggle()
   api.getMovies()
     .then(ui.getMoviesSuccess)
     .catch(ui.getMoviesFailure)
 }
-
-// const onDeleteMovie = function (event) {
-//   event.preventDefault()
-//   api.deleteMovies()
-//     .then(ui.deleteMovies)
-//     // .catch(ui.deleteMoviesFailure)
-// }
 
 const addHandlers = function () {
   $('#make-movie').on('submit', onMakeMovie)

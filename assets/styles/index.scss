@@ -78,6 +78,10 @@ display:none
 display:none
 }
 
+#back{
+display:none
+}
+
 #footerwrap {
 	padding-top: 70px;
 	padding-bottom: 50px;
@@ -99,7 +103,7 @@ color: darkgrey;
   width: 600px;
 }
 
-.btn-primary, #list-button{
+.btn-primary, #list-button, .edit-movie, .delete-movie{
     background-color: rgb(105, 107, 112) !important;
     border-color: black !important;
     font-family: 'Khula', sans-serif !important;
@@ -130,6 +134,7 @@ h5{
 #list-body{
   display: none;
 }
+
 .textboxclass {
 height: 40px;
 width: 400px;
@@ -143,4 +148,6 @@ width: 200px;
 li{
 list-style-type: none;
 font-size: 18px;
+color: white;
+background-color: black;
 }

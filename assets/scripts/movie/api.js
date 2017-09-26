@@ -33,8 +33,21 @@ const deleteMovie = function (movieId) {
   })
 }
 
+const editMovie = function (data, movieId) {
+  console.log(movieId)
+  return $.ajax({
+    url: config.apiOrigin + '/movies/' + movieId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   makeMovie,
   getMovies,
-  deleteMovie
+  deleteMovie,
+  editMovie
 }

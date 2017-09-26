@@ -24,7 +24,7 @@ const signInSuccess = function (data) {
   $('#sign-up').hide()
   $('#sign-in').hide()
   $('#list-body').show()
-  $('#get-movies').show()
+  // $('#get-movies').show()
   // $('.form-group').hide()
   store.user = data.user
 }

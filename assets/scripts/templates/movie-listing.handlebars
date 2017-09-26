@@ -1,8 +1,20 @@
 {{#each movies as |movie|}}
 
   <ul data-id="{{movie.id}}">
-    <li> Title <strong>{{movie.title}}</strong> Director <strong>{{movie.director}}</strong> Summary: <strong>{{movie.summary}}</strong> Genre: <strong>{{movie.genre}}</strong> Runtime: <strong>{{movie.runtime}}</strong> Year Released <strong>{{movie.year_release}}</strong></li>
-    <li><button class="btn btn-primary delete-movie">Delete Movie</button></li>
+    <li> <strong>Title:<br></strong> {{movie.title}} <br><strong>Director:<br></strong> {{movie.director}} <br> <strong>Summary:<br></strong> {{movie.summary}}<br><strong>Genre: </strong> {{movie.genre}} <strong>Runtime:</strong> {{movie.runtime}}<strong> Year Released:</strong>{{movie.year_release}}</li>
+    <li><button class="btn btn-info btn-xs delete-movie">Delete</button></li>
+     <li><button class= "edit-movie btn btn-info btn-xs">Edit</button></li>
+     <form class="edit-movie form-inline" id="edit-movie-{{movie.id}}">
+     <fieldset>
+                   <input type="text" name="movie[title]" class="form-control" value="{{movie.title}}">
+                   <input type="text" name="movie[director]" class="form-control" value="{{movie.director}}">
+                   <input type="text" name="movie[summary]" class="form-control" value="{{movie.summary}}">
+                   <input type="text" name="movie[genre]" class="form-control" value={{movie.genre}}>
+                   <input type="text" name="movie[runtime]" class="form-control" value={{movie.runtime}}>
+                   <input type="text" name="movie[year_released]" class="form-control" value={{movie.year_release}}>
+                   <input type="submit" name="submit" class="btn btn-primary" value="Edit">
+    </fieldset>
+      </form>
   </li>
   </ul>
 
