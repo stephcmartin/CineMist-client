@@ -36,16 +36,6 @@ As a user, I want to:
 * DAY 4: Polish Front End, Wireframes, ReadME
 * Day 5: Troubleshoot
 
-<!-- ## My table and Columns
-
-md
-Table: user
-Cloumn: Username (can be email address or uername), password
-
-Table: movie
-Column: title, director, summary, genre, runtime, year released
--->
-
 ## Built with
 * HTML
 * CSS
