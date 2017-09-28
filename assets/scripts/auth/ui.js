@@ -52,6 +52,7 @@ const signOutSuccess = function (data) {
   $('#sign-in').show()
   $('#list-body').hide()
   $('#change-password').hide()
+  $('#sign-out').hide()
   $('#sign-in').trigger('reset')
   $('#sign-up').trigger('reset')
   $('#list').empty()
