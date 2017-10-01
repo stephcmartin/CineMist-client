@@ -25,6 +25,14 @@ const getMoviesSuccess = function (data) {
   $('.edit-movie-button').on('click', onEditClick)
   $('#to-watch').attr('disabled', 'disabled')
   $('#make-movie').trigger('reset')
+  if (data.movies.length === 0) {
+    noMoviesCreated()
+  }
+}
+const noMoviesCreated = function () {
+  $('#message').css('display', 'inline-block')
+  $('#message').show()
+  $('#message').text('You Have Not Created A Movie List Yet. Please Add A Fist first!')
 }
 
 const getMoviesFailure = function () {
