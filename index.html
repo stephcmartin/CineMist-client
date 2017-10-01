@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CineMist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="https://i.imgur.com/0xo2Lwm.png">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <link href="https://fonts.googleapis.com/css?family=Bevan" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="container-fluid">
+  <h1>CineMist</h1>
+  <div class="message" id='message'></div>
+  <h2>Never Forget A Movie Again</h2>
+  <!-- Button trigger modal -->
+  <button type="button" id="about" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+About
+</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">About CineMist</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          You're at a bar and someone recommends you a movie that you should watch. "You'll love it", they said. You scribbe it down somewhere on a napkin, stick it in your pocket. <br><br><i>Two hours later, the napkin is nowhere to be found.</i><br><br>          We created CineMist so that you no longer have to write your to-watch lists on sticky notes, whiteboards, random scraps of paper, or the back of your hand.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- AUTH FUNCTIONS-->
+  <div class="form-group">
+    <form id="sign-up">
+      <fieldset>
+        <h5>Create An Account:</h5>
+        <input type="text" name="credentials[email]" class="textbox" placeholder="USERNAME">
+        <input type="password" name="credentials[password]" class="textbox" placeholder="PASSWORD">
+        <input type="password" name="credentials[password_confirmation]" class="textbox" placeholder="PASSWORD">
+        <input type="submit" name="submit" value="SIGN UP" class="btn btn-primary btn-s">
+      </fieldset>
+    </form>
+    <br>
+    <form id="sign-in">
+      <fieldset>
+        <h5>Login</h5>
+        <input type="text" name="credentials[email]" class="textbox" placeholder="USERNAME">
+        <input type="password" name="credentials[password]" class="textbox" placeholder="PASSWORD">
+        <input type="submit" name="submit" value="SIGN IN" class="btn btn-primary btn-s">
+      </fieldset>
+    </form>
+    <form id="change-password">
+      <fieldset>
+        <h5>Change your password:</h5>
+        <input type="password" name="passwords[old]" class="password_textbox" placeholder="OLD PW">
+        <input type="password" name="passwords[new]" class="password_textbox" placeholder="NEW PW"><br>
+        <input type="submit" name="submit" value="CHANGE PASSWORD" class="btn btn-primary btn-xs">
+      </fieldset>
+    </form>
+    <br>
+    <form id="sign-out">
+      <fieldset>
+        <input type="submit" name="submit" value="Sign Out" class="btn btn-primary">
+      </fieldset>
+    </form>
+  </div>
+  <br>
+  <!-- List Options -->
+  <div id="list-body">
+    <!-- Get Movies -->
+    <form id="get-movies">
+      <fieldset>
+        <input type="submit" name="submit" value="My To-Watch List" class="btn btn-primary btn-md" id="to-watch">
+      </fieldset>
+    </form>
+    <!-- Get Movies End -->
+    <form id="hide-movies">
+      <fieldset>
+        <input type="submit" name="submit" value="Hide To-Watch List" class="btn btn-primary btn-md" id="hide-movies">
+      </fieldset>
+    </form>
+    <!-- Empty List Class -->
+    <div class="list" id='list'></div>
+    <!-- End List Class -->
+    <div id="movie-list">
+      <h5>Add A New Movie To Your List:</h5><br>
+      <form id="make-movie">
+        <fieldset>
+          <input type="title" class="textboxclass" name="movie[title]" placeholder="movie title">
+          <input type="director" class="textboxclass" name="movie[director]" placeholder="director">
+          <input type="summary" class="textboxclass" name="movie[summary]" placeholder="summary">
+          <input type="genre" class="textboxclass" name="movie[genre]" placeholder="genre">
+          <input type="runtime" class="textboxclass" name="movie[runtime]" placeholder="runtime">
+          <input type="year_release" class="textboxclass" name="movie[year_release]" placeholder="year released"><br>
+          <input type="submit" name="submit" value="Add To List" class="btn btn-primary">
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <!--  footerwrap -->
+  <div id="footerwrap">
+    <div class="container">
+      <div class="col-lg-4">
+        <p>Web Developer, UX Designer & <br>Poodle Enthuisast</p>
+      </div>
+
+      <div class="col-lg-4">
+        <p>Created By:<br><a href="http://stephcmartin.github.io">Stephanie Chow Martin Connelly ©</a></p>
+      </div>
+      <div class="col-lg-4">
+        <a href="http://www.linkedin.com/in/stephcmartin" class="fa fa-linkedin"> </a>
+      <a href="http://www.github.com/stephcmartin" class="fa fa-github"> </a>
+      <a href="http://www.instagram.com/stephcmartin" class="fa fa-instagram"> </a>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
